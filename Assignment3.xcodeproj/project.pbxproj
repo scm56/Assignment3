@@ -18,6 +18,9 @@
 		8B430A9C18A1467800A53502 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B430A9B18A1467800A53502 /* Default-568h@2x.png */; };
 		8B430A9F18A1467900A53502 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B430A9E18A1467900A53502 /* ViewController.m */; };
 		8B430AA218A1467900A53502 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B430AA018A1467900A53502 /* ViewController.xib */; };
+		8B430AAD18A146E400A53502 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B430AAB18A146E400A53502 /* DetailViewController.m */; };
+		8B430AAE18A146E400A53502 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B430AAC18A146E400A53502 /* DetailViewController.xib */; };
+		8B430AB118A146FA00A53502 /* Fruit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B430AB018A146FA00A53502 /* Fruit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		8B430A9D18A1467900A53502 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8B430A9E18A1467900A53502 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8B430AA118A1467900A53502 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		8B430AAA18A146E400A53502 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8B430AAB18A146E400A53502 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8B430AAC18A146E400A53502 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		8B430AAF18A146FA00A53502 /* Fruit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fruit.h; sourceTree = "<group>"; };
+		8B430AB018A146FA00A53502 /* Fruit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fruit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +91,11 @@
 		8B430A8B18A1467800A53502 /* Assignment3 */ = {
 			isa = PBXGroup;
 			children = (
+				8B430AA918A146BE00A53502 /* Detail View */,
+				8B430AA818A146B400A53502 /* Fruit */,
 				8B430A9418A1467800A53502 /* AppDelegate.h */,
 				8B430A9518A1467800A53502 /* AppDelegate.m */,
-				8B430A9D18A1467900A53502 /* ViewController.h */,
-				8B430A9E18A1467900A53502 /* ViewController.m */,
-				8B430AA018A1467900A53502 /* ViewController.xib */,
+				8B430AB218A1470600A53502 /* View Controller */,
 				8B430A8C18A1467800A53502 /* Supporting Files */,
 			);
 			path = Assignment3;
@@ -105,6 +113,35 @@
 				8B430A9B18A1467800A53502 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B430AA818A146B400A53502 /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				8B430AAF18A146FA00A53502 /* Fruit.h */,
+				8B430AB018A146FA00A53502 /* Fruit.m */,
+			);
+			name = Fruit;
+			sourceTree = "<group>";
+		};
+		8B430AA918A146BE00A53502 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				8B430AAA18A146E400A53502 /* DetailViewController.h */,
+				8B430AAB18A146E400A53502 /* DetailViewController.m */,
+				8B430AAC18A146E400A53502 /* DetailViewController.xib */,
+			);
+			name = "Detail View";
+			sourceTree = "<group>";
+		};
+		8B430AB218A1470600A53502 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B430A9D18A1467900A53502 /* ViewController.h */,
+				8B430A9E18A1467900A53502 /* ViewController.m */,
+				8B430AA018A1467900A53502 /* ViewController.xib */,
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +200,7 @@
 				8B430A9A18A1467800A53502 /* Default@2x.png in Resources */,
 				8B430A9C18A1467800A53502 /* Default-568h@2x.png in Resources */,
 				8B430AA218A1467900A53502 /* ViewController.xib in Resources */,
+				8B430AAE18A146E400A53502 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +214,8 @@
 				8B430A9218A1467800A53502 /* main.m in Sources */,
 				8B430A9618A1467800A53502 /* AppDelegate.m in Sources */,
 				8B430A9F18A1467900A53502 /* ViewController.m in Sources */,
+				8B430AAD18A146E400A53502 /* DetailViewController.m in Sources */,
+				8B430AB118A146FA00A53502 /* Fruit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
