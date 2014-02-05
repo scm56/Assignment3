@@ -22,7 +22,9 @@
     
     for (int i=0; i<50; i++) {
         Fruit *tempFruit = [[Fruit alloc] initWithWithName:@"Bananas" andColor:@"Yellow" andShape:@"Curvy"];
+        tempFruit.url = @"http://en.m.wikipedia.org/wiki/Banana";
         [_cart addObject:tempFruit];
+        
     }
     
     self.title = @"Banana Bar";
@@ -48,6 +50,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if([_cart count] == 0){
+        return 1;
+    }
     return [_cart count];
 }
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -61,15 +66,21 @@
     if (cell == Nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"TableViewCell"];
     }
-    Fruit *tempFruit = [_cart objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = [tempFruit name];
-    cell.detailTextLabel.text = [tempFruit color];
-    
-    if (_allSelected) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else{
-        cell.accessoryType = UITableViewCellAccessoryNone;
+    if([_cart count] == 0){
+        cell.textLabel.text = @"No Fruit in Cart";
+        cell.detailTextLabel.text = @"";
+        
+    } else {
+        Fruit * tempFruit = [_cart objectAtIndex:indexPath.row];
+        
+        cell.textLabel.text = [tempFruit name];
+        cell.detailTextLabel.text = [tempFruit color];
+        
+        if(_allSelected){
+            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        } else {
+            [cell setAccessoryType:UITableViewCellAccessoryNone];
+        }
     }
     
     
