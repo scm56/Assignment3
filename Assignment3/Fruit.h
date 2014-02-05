@@ -10,4 +10,12 @@
 
 @interface Fruit : NSObject
 
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * shape;
+@property (nonatomic, strong) NSString * color;
+
+-initWithWithName:(NSString *) inName andColor:(NSString *) inColor andShape:(NSString *) inShape;
+
+-(NSString *) description;
+
 @end
