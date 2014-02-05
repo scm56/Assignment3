@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, assign) BOOL allSelected;
+
+@property (nonatomic, strong) NSMutableArray *cart;
+
+@property (nonatomic, weak) IBOutlet UITableView *cartView;
+
+@property (nonatomic, weak) IBOutlet UIButton *selectAll;
+
+-(IBAction)selectAllOrNone:(id)sender;
 
 @end
