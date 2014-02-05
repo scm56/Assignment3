@@ -17,9 +17,24 @@
 
 - (void)viewDidLoad
 {
+    _allSelected = NO;
+    _cart = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    for (int i=0; i<50; i++) {
+        Fruit *tempFruit = [[Fruit alloc] initWithWithName:@"Bananas" andColor:@"Yellow" andShape:@"Curvy"];
+        [_cart addObject:tempFruit];
+    }
+    
+    self.title = @"Banana Bar";
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+-(IBAction)selectAllOrNone:(id)sender{
+    _allSelected = !_allSelected;
+    [_cartView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
