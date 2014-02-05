@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Fruit.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -37,6 +38,17 @@
     [_cartView reloadData];
 }
 
+//Should remove all of the fruit in the cart.
+-(IBAction)removeAllFruitInCart:(id)sender
+{
+    
+}
+
+//should add 50 bananas to the cart and display them!
+-(IBAction)fillCartWithBananas:(id)sender
+{
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -86,6 +98,10 @@
     
     
     return cell;
+}
+
+-(void) tableView:(UITableView *)tableView {
+    
 }
 
 @end
