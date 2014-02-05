@@ -35,6 +35,13 @@
 
 -(IBAction)selectAllOrNone:(id)sender{
     _allSelected = !_allSelected;
+    
+    if(_allSelected){
+        [_selectAll setTitle:@"Select None" forState:UIControlStateNormal];
+    } else {
+        [_selectAll setTitle:@"Select All" forState:UIControlStateNormal];
+    }
+    
     [_cartView reloadData];
 }
 
@@ -100,7 +107,7 @@
     return cell;
 }
 
--(void) tableView:(UITableView *)tableView {
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
 
