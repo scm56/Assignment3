@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad
 {
+    
     _allSelected = NO;
     _cart = [[NSMutableArray alloc] initWithCapacity:0];
     
@@ -32,7 +33,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
+- (void) fillCart
+{
+    for (int i=0; i<50; i++) {
+        Fruit *tempFruit = [[Fruit alloc] initWithWithName:@"Bananas" andColor:@"Yellow" andShape:@"Curvy"];
+        tempFruit.url = @"http://en.m.wikipedia.org/wiki/Banana";
+        [_cart addObject:tempFruit];
+    }}
 -(IBAction)selectAllOrNone:(id)sender{
     _allSelected = !_allSelected;
     
@@ -48,13 +55,16 @@
 //Should remove all of the fruit in the cart.
 -(IBAction)removeAllFruitInCart:(id)sender
 {
-    
+    [_cart removeAllObjects];
+    [_cartView reloadData];
+
 }
 
 //should add 50 bananas to the cart and display them!
 -(IBAction)fillCartWithBananas:(id)sender
 {
-    
+    [self fillCart];
+    [_cartView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

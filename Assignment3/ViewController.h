@@ -18,6 +18,12 @@
 
 @property (nonatomic, weak) IBOutlet UIButton *selectAll;
 
+@property (nonatomic, weak) IBOutlet UIButton *fill;
+
+@property (nonatomic, weak) IBOutlet UIButton *clear;
+
 -(IBAction)selectAllOrNone:(id)sender;
+-(IBAction)fillCartWithBananas:(id)sender;
+-(IBAction)removeAllFruitInCart:(id)sender;
 
 @end
